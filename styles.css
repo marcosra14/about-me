@@ -109,8 +109,8 @@ footer p {
     }
 
     .portfolio-icon {
-        width: 2px; /* Ajusta el tamaño que prefieras */
-        height: 2px; /* Asegura que la imagen sea cuadrada */
+        width: 2px !important; /* Ajusta el tamaño que prefieras */
+        height: 2px !important; /* Asegura que la imagen sea cuadrada */
         margin-top: 1px; /* Espacio entre el texto y la imagen */
     }
 }
