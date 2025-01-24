@@ -107,4 +107,10 @@ footer p {
     .section h2 {
         font-size: 1.8rem;
     }
+
+    .portfolio-icon {
+        width: 50px; /* Ajusta el tamaño que prefieras */
+        height: 50px; /* Asegura que la imagen sea cuadrada */
+        margin-top: 10px; /* Espacio entre el texto y la imagen */
+    }
 }
