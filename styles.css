@@ -103,6 +103,13 @@ footer p {
     font-size: 1rem;
 }
 
+.portfolio-icon {
+    width: 100px !important; /* Forzar el tamaño */
+    height: 100px !important; /* Forzar el tamaño */
+    object-fit: contain !important;
+    margin-top: 10px !important;
+}
+
 /* Estilo responsive para dispositivos móviles */
 @media (max-width: 768px) {
     .container {
@@ -123,11 +130,5 @@ footer p {
 
     .section h2 {
         font-size: 1.8rem;
-    }
-
-    .portfolio-icon {
-        width: 5px; /* Ajusta el tamaño que prefieras */
-        height: 5px; /* Asegura que la imagen sea cuadrada */
-        margin-top: 1px; /* Espacio entre el texto y la imagen */
     }
 }
