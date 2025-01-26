@@ -74,6 +74,23 @@ nav ul li a:hover {
     line-height: 1.8;
 }
 
+.portfolio-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen con el texto */
+    justify-content: space-between; /* Opcional: separa la imagen del texto */
+    gap: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.portfolio-content img {
+    max-width: 100px; /* Ajusta el tamaño de la imagen según lo necesario */
+    height: auto;
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
+
+.portfolio-content p {
+    flex: 1; /* Permite que el texto ocupe más espacio si es necesario */
+}
+
 /* Estilo del footer */
 footer {
     background-color: #333;
