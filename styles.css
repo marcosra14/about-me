@@ -91,6 +91,44 @@ nav ul li a:hover {
     flex: 1; /* Permite que el texto ocupe más espacio si es necesario */
 }
 
+.portfolio-icon {
+    width: 100px !important; /* Forzar el tamaño */
+    height: 100px !important; /* Forzar el tamaño */
+    object-fit: contain !important;
+    margin-top: 10px !important;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre el texto y las imágenes */
+}
+
+.contact-content p {
+    text-align: center; /* Centra el texto */
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-images {
+    display: flex; /* Organiza las imágenes en fila */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.contact-images img {
+    max-width: 80px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+    border-radius: 50%; /* Hace las imágenes circulares */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una ligera sombra */
+    transition: transform 0.3s; /* Añade una animación para el hover */
+}
+
+.contact-images img:hover {
+    transform: scale(1.1); /* Amplía la imagen ligeramente al pasar el mouse */
+}
+
 /* Estilo del footer */
 footer {
     background-color: #333;
@@ -101,13 +139,6 @@ footer {
 
 footer p {
     font-size: 1rem;
-}
-
-.portfolio-icon {
-    width: 100px !important; /* Forzar el tamaño */
-    height: 100px !important; /* Forzar el tamaño */
-    object-fit: contain !important;
-    margin-top: 10px !important;
 }
 
 /* Estilo responsive para dispositivos móviles */
