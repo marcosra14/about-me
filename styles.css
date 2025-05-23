@@ -169,3 +169,23 @@ html {
     scroll-behavior: smooth;
 }
 
+.portfolio-grid {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Opcional, para que se ajuste en móviles */
+}
+
+.portfolio-column {
+    flex: 1;
+    text-align: center;
+}
+
+.portfolio-icon {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
