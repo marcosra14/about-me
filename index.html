@@ -23,7 +23,10 @@
     <section id="about" class="section">
         <div class="container">
             <h2>Sobre Mí</h2>
-            <p>Estudiante de 3º curso de Ingeniería Informática en la UAM.</p>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Estudiante de 3º curso de Ingeniería Informática en la UAM. Apasionado por el desarrollo de software, los videojuegos y el diseño web moderno.</p>
+            </div>
         </div>
     </section>
 
@@ -31,7 +34,7 @@
         <div class="container">
             <h2>Mis proyectos</h2>
             <div class="portfolio-content">
-                <p>He desarrollado un juego en Unity para android 2D llamado: RapidRide ¡Disponible ya en Google Play!</p>
+                <p>He desarrollado un juego en Unity para Android 2D llamado: <strong>RapidRide</strong>. ¡Disponible ya en Google Play!</p>
                 <img src="assets/icono512x512.png" alt="Icono de la aplicación" class="portfolio-icon">
             </div>
         </div>
@@ -41,14 +44,14 @@
         <div class="container">
             <h2>Contacto</h2>
             <div class="portfolio-content">
-                <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a <strong>[marcosra14@gmail.com]</strong>.</p>
-                <img src="assets/logoGMAIL.JPG" alt="Ícono de redes sociales" class="portfolio-icon">
+                <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a <strong>marcosra14@gmail.com</strong>.</p>
+                <img src="assets/logoGMAIL.JPG" alt="Logo de Gmail" class="portfolio-icon">
             </div>
             <div class="portfolio-content">
                 <p>También puedes visitarme en mi perfil de LinkedIn: 
-                    <a href="https://www.linkedin.com/in/marcos-rodriguez-alvarez-a9291127a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Mi LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/marcos-rodriguez-alvarez-a9291127a" target="_blank">Mi LinkedIn</a>
                 </p>
-                <img src="assets/logoLINKEDIN.JPG" alt="Ícono de redes sociales" class="portfolio-icon">
+                <img src="assets/logoLINKEDIN.JPG" alt="Logo de LinkedIn" class="portfolio-icon">
             </div>
         </div>
     </section>
@@ -58,5 +61,16 @@
             <p>&copy; 2025 Mi Página Personal - Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(acc => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+            });
+        });
+    </script>
 </body>
 </html>
