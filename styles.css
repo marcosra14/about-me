@@ -163,3 +163,9 @@ footer p {
         font-size: 1.8rem;
     }
 }
+
+/* Scroll suave al hacer clic en anclas */
+html {
+    scroll-behavior: smooth;
+}
+
