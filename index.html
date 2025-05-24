@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personal</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marcosra14 - Desarrollador</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>¡Hola! Soy Marcosra14</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#portfolio">Mis proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Marcosra14</div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#portfolio">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <p>Estudiante de 3º curso de Ingeniería Informática en la UAM.</p>
-        </div>
+  <main>
+    <section class="hero">
+      <h1>¡Hola! Soy Marcos Rodríguez Álvarez</h1>
     </section>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Mis proyectos</h2>
-            <div class="portfolio-content">
-                <p>He desarrollado un juego en Unity para android 2D llamado: RapidRide ¡Disponible ya en Google Play!</p>
-                <img src="assets/icono512x512.png" alt="Icono de la aplicación" class="portfolio-icon">
-            </div>
-        </div>
+    <section id="about" class="section fade-in">
+      <h2>Sobre Mí</h2>
+      <p>Soy estudiante de 3º de Ingeniería Informática en la UAM, apasionado por el desarrollo de software, videojuegos y tecnología en general.</p>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="portfolio-content">
-                <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a <strong>[marcosra14@gmail.com]</strong>.</p>
-                <img src="assets/logoGMAIL.JPG" alt="Ícono de redes sociales" class="portfolio-icon">
-            </div>
-            <div class="portfolio-content">
-                <p>También puedes visitarme en mi perfil de LinkedIn: 
-                    <a href="https://www.linkedin.com/in/marcos-rodriguez-alvarez-a9291127a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Mi LinkedIn</a>
-                </p>
-                <img src="assets/logoLINKEDIN.JPG" alt="Ícono de redes sociales" class="portfolio-icon">
-            </div>
+    <section id="portfolio" class="section fade-in">
+      <h2>Mis Proyectos</h2>
+      <div class="card">
+        <img src="assets/icono512x512.png" alt="Icono RapidRide" />
+        <div class="card-text">
+          <h3>RapidRide</h3>
+          <p>Un juego 2D para Android hecho en Unity. ¡Disponible ya en Google Play!</p>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mi Página Personal - Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <section id="contact" class="section fade-in">
+      <h2>Contacto</h2>
+      <p>Puedes escribirme a: <strong>marcosra14@gmail.com</strong></p>
+      <div class="socials">
+        <a href="mailto:marcosra14@gmail.com">
+          <img src="assets/logoGMAIL.JPG" alt="Gmail" />
+        </a>
+        <a href="https://www.linkedin.com/in/marcos-rodriguez-alvarez-a9291127a" target="_blank">
+          <img src="assets/logoLINKEDIN.JPG" alt="LinkedIn" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Marcos Rodríguez Álvarez — Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
