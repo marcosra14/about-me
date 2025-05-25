@@ -24,7 +24,6 @@
     </nav>
   </header>
 
-
   <main>
     <section class="hero">
       <h1>¡Hola! Soy Marcos Rodríguez Álvarez</h1>
@@ -63,5 +62,14 @@
   <footer>
     <p>&copy; 2025 Marcos Rodríguez Álvarez — Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+      });
+    });
+  </script>
+
 </body>
 </html>
