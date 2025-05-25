@@ -64,12 +64,29 @@
   </footer>
 
   <script>
+    const menuToggle = document.getElementById('menu-toggle');
+
+    // Cierra el menú si se hace clic en un enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('menu-toggle').checked = false;
+        menuToggle.checked = false;
       });
     });
+
+    // Cierra el menú si se hace scroll con el menú desplegado
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+      if (menuToggle.checked) {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+          // Scroll hacia abajo
+          menuToggle.checked = false;
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+      }
+    });
   </script>
+
 
 </body>
 </html>
