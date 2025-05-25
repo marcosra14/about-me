@@ -144,6 +144,46 @@ a:hover {
   transition: transform 0.3s ease;
   color: white;
   cursor: pointer;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.card-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Responsive: stack elements on small screens */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+}
+
+.card-text h3 {
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
 .card:hover {
@@ -151,21 +191,6 @@ a:hover {
   box-shadow: 0 8px 20px rgba(0, 171, 250, 0.5);
 }
 
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}
-
-.card-text {
-  padding: 1rem;
-  color: white;
-}
-
-.card-text h3 {
-  margin-bottom: 0.5rem;
-  color: white;
-}
 
 /* Contact */
 .socials {
