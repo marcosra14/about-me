@@ -330,22 +330,20 @@ html {
 
 
 .back-button {
-  position: fixed;
-  top: 50%;
-  left: 8.5%;
   background-color: #0ea5e9;
   color: white;
   text-decoration: none;
   font-weight: 800;
-  z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  transition: transform 0.3s ease;
   justify-content: center;
+  gap: 0.4rem;
   border-radius: 999px;
-  font-size: 10rem;
-  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  margin: 8rem auto 2rem auto; /* ⬅️ Esto lo centra horizontalmente */
+  width: fit-content; /* ⬅️ Se ajusta al contenido */
+  transition: transform 0.3s ease;
   transform: translateY(-50%);
 }
 
@@ -359,6 +357,16 @@ html {
   height: 1.75rem;
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* ajusta este valor según tu diseño */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
 p + p {
   margin-top: 1.25rem;
 }
@@ -368,4 +376,23 @@ p + p {
   /* max-width: 800px;
   margin: 0 auto; */
 }
+
+/* Estructura para que el footer quede abajo rapidride */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+
 
