@@ -602,34 +602,34 @@ html, body {
     text-align: left;
   }
 
-  /* --- Estilos para las Cajitas (Tech Pills) --- */
-.tech-pill-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las píldoras salten de línea en móvil */
-  gap: 8px; /* Espacio entre las cajitas */
-  margin-top: 15px;
-}
+    /* --- Estilos para las Cajitas (Tech Pills) --- */
+  .tech-pill-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; /* Espacio entre las cajitas */
+    margin-top: 15px; 
+    padding-top: 5px;
+  }
 
-.tech-pill {
-  /* Fondo semitransparente que usa tu color primario */
-  background-color: #38bdf820; 
-  color: #38bdf8; 
-  padding: 5px 12px;
-  /* Borde 1px sólido con tu color primario */
-  border: 1px solid #38bdf8;
-  /* Radio para crear la forma de píldora */
-  border-radius: 999px; 
-  font-size: 0.8rem; /* Tamaño de fuente más pequeño para un look de "tag" */
-  font-weight: 600;
-  /* Sombra sutil y transición para el efecto hover */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+  .tech-pill {
+    /* Fondo transparente y borde/texto azul */
+    background-color: transparent; 
+    color: #38bdf8; 
+    padding: 5px 12px;
+    border: 1px solid #38bdf8;
+    /* Borde redondeado para la forma de píldora */
+    border-radius: 999px; 
+    font-size: 0.8rem; 
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
 
-.tech-pill:hover {
-  /* Se hace más opaco y se levanta ligeramente al pasar el ratón */
-  background-color: #38bdf850;
-  transform: translateY(-1px);
-}
+  .tech-pill:hover {
+    /* Efecto hover: se rellena de azul y texto oscuro */
+    background-color: #38bdf8;
+    color: #0f172a; 
+    transform: translateY(-1px);
+  }
 }
 
