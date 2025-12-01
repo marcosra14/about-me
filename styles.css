@@ -468,24 +468,29 @@ html, body {
   padding-left: 30px; /* Espacio para el punto y la línea */
 }
 
-/* Contenido del evento */
 .timeline-content {
   padding: 15px;
   background-color: #0f172a;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   border: 1px solid #38bdf8;
-  transition: all 0.5s ease; /* Transición para que la expansión sea suave */
+  /* Aumentamos la duración y simplificamos la transición general */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Aseguramos que se vea interactivo */
 }
 
 /* Detalles Ocultos */
 .timeline-details {
   max-height: 0; /* Oculta la información por defecto */
-  overflow: hidden;
-  transition: max-height 0.7s ease-in-out, opacity 0.5s ease;
   opacity: 0;
+  overflow: hidden;
   padding-top: 0;
+  /* Hacemos la transición de max-height más lenta y uniforme (ease-in-out) */
+  transition: max-height 0.6s ease-in-out, 
+              opacity 0.6s ease-in-out,
+              padding-top 0.6s ease-in-out; 
 }
+
 .timeline-details hr {
   border: none;
   border-top: 1px solid #38bdf850;
@@ -508,11 +513,11 @@ html, body {
 .timeline-content:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(56, 189, 248, 0.5); 
-  background-color: #1e293b; /* Cambia el color para indicar que está activo */
+  background-color: #1e293b; 
 }
 
 .timeline-content:hover .timeline-details {
-  max-height: 200px; /* Suficiente altura para mostrar el contenido */
+  max-height: 200px; /* Mantener un valor generoso */
   opacity: 1;
   padding-top: 10px;
 }
