@@ -571,6 +571,36 @@ html, body {
   left: -8px; /* - (ancho_dot/2 + ancho_linea/2) */
 }
 
+    /* --- Estilos para las Cajitas (Tech Pills) --- */
+  .tech-pill-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; /* Espacio entre las cajitas */
+    margin-top: 15px; 
+    padding-top: 5px;
+  }
+
+  .tech-pill {
+    /* Fondo transparente y borde/texto azul */
+    background-color: transparent; 
+    color: #38bdf8; 
+    padding: 5px 12px;
+    border: 1px solid #38bdf8;
+    /* Borde redondeado para la forma de píldora */
+    border-radius: 999px; 
+    font-size: 0.8rem; 
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
+
+  .tech-pill:hover {
+    /* Efecto hover: se rellena de azul y texto oscuro */
+    background-color: #38bdf8;
+    color: #0f172a; 
+    transform: translateY(-1px);
+  }
+
 
 /* Media Query para pantallas pequeñas (Movil: apila la cronología) */
 @media (max-width: 768px) {
@@ -600,36 +630,6 @@ html, body {
   /* El contenido se alinea a la izquierda */
   .timeline-content {
     text-align: left;
-  }
-
-    /* --- Estilos para las Cajitas (Tech Pills) --- */
-  .tech-pill-container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 8px; /* Espacio entre las cajitas */
-    margin-top: 15px; 
-    padding-top: 5px;
-  }
-
-  .tech-pill {
-    /* Fondo transparente y borde/texto azul */
-    background-color: transparent; 
-    color: #38bdf8; 
-    padding: 5px 12px;
-    border: 1px solid #38bdf8;
-    /* Borde redondeado para la forma de píldora */
-    border-radius: 999px; 
-    font-size: 0.8rem; 
-    font-weight: 600;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  }
-
-  .tech-pill:hover {
-    /* Efecto hover: se rellena de azul y texto oscuro */
-    background-color: #38bdf8;
-    color: #0f172a; 
-    transform: translateY(-1px);
   }
 }
 
