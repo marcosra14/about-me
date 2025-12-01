@@ -394,5 +394,173 @@ html, body {
   flex: 1;
 }
 
+/* --- Timeline (Cronología) --- */
+.timeline-container {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #1e293b; /* Fondo similar al de las tarjetas */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
 
+.timeline-container h3 {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(0, 171, 250, 0.8);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Línea vertical de la cronología */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, #38bdf8, #0ea5e9, #38bdf8);
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Centra la línea */
+  margin-left: -2px;
+  box-shadow: 0 0 10px rgba(0, 171, 250, 0.8);
+}
+
+.timeline-item {
+  padding: 10px 0;
+  position: relative;
+  width: 50%; /* 50% para que los ítems estén a ambos lados */
+  opacity: 0; /* Inicialmente oculto para animación */
+  transform: translateY(20px);
+  animation: slideIn 1s ease forwards; /* Animación de entrada */
+}
+
+/* Retraso de animación para que sea más fluido y se vean uno tras otro */
+.timeline-item:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Ítems a la izquierda */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 30px; /* Espacio para el punto y la línea */
+}
+
+/* Ítems a la derecha */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 30px; /* Espacio para el punto y la línea */
+}
+
+/* Contenido del evento */
+.timeline-content {
+  padding: 15px;
+  background-color: #0f172a; /* Color de fondo principal */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  border: 1px solid #38bdf8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(56, 189, 248, 0.5); /* Brillo al pasar el ratón */
+}
+
+.timeline-content h4 {
+  display: flex;
+  align-items: center;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+}
+
+.timeline-dates {
+  font-weight: 600;
+  color: #38bdf8;
+  font-size: 0.9rem !important;
+}
+
+.timeline-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+/* Punto de la cronología */
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #0ea5e9;
+  border: 3px solid #1e293b; /* Color de fondo del body */
+  top: 30px;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #0ea5e9, 0 0 20px #0ea5e9; /* Efecto de brillo */
+}
+
+/* Posición de los puntos */
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px; /* - (ancho_dot/2 + ancho_linea/2) */
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px; /* - (ancho_dot/2 + ancho_linea/2) */
+}
+
+
+/* Media Query para pantallas pequeñas (Movil: apila la cronología) */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 0;
+  }
+
+  /* La línea vertical se mueve a la izquierda */
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 50px; /* Nuevo espacio a la izquierda de los ítems */
+    padding-right: 5px;
+  }
+
+  /* Los puntos se ajustan a la nueva posición de la línea */
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 12px; /* Posición junto a la línea */
+    right: auto;
+  }
+
+  /* El contenido se alinea a la izquierda */
+  .timeline-content {
+    text-align: left;
+  }
+}
 
