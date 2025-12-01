@@ -471,16 +471,50 @@ html, body {
 /* Contenido del evento */
 .timeline-content {
   padding: 15px;
-  background-color: #0f172a; /* Color de fondo principal */
+  background-color: #0f172a;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   border: 1px solid #38bdf8;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.5s ease; /* Transición para que la expansión sea suave */
 }
 
+/* Detalles Ocultos */
+.timeline-details {
+  max-height: 0; /* Oculta la información por defecto */
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out, opacity 0.5s ease;
+  opacity: 0;
+  padding-top: 0;
+}
+.timeline-details hr {
+  border: none;
+  border-top: 1px solid #38bdf850;
+  margin: 10px 0;
+}
+.timeline-details ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+
+.timeline-details li {
+  margin-bottom: 5px;
+  color: #cbd5e1;
+}
+
+
+
+/* Efecto Hover: Muestra los detalles */
 .timeline-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(56, 189, 248, 0.5); /* Brillo al pasar el ratón */
+  box-shadow: 0 8px 15px rgba(56, 189, 248, 0.5); 
+  background-color: #1e293b; /* Cambia el color para indicar que está activo */
+}
+
+.timeline-content:hover .timeline-details {
+  max-height: 200px; /* Suficiente altura para mostrar el contenido */
+  opacity: 1;
+  padding-top: 10px;
 }
 
 .timeline-content h4 {
